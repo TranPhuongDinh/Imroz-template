@@ -42,6 +42,9 @@
         <link rel="stylesheet" href="./index.css" />
     </head>
     <body>
+        <div class="preload">
+            <img src="./img/loading.svg" alt="loading..." />
+        </div>
         <div class="mobile-menu" id="accordion">
             <div class="mobile-menu__header">
                 <a href="./index.html" class="mobile__brand">
@@ -1445,50 +1448,6 @@
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>
-            window.addEventListener("load", function () {
-                $(document).ready(function () {
-                    AOS.init();
-
-                    $(".carousel").slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        speed: 1000,
-                        arrows: true,
-                        autoplay: true,
-                        fade: true,
-                        infinite: true,
-                        easing: "fade",
-                        infinite: true,
-                        adaptiveHeight: true,
-                        dots: true,
-                    });
-                });
-
-                $(".back-to-top").click(function () {
-                    $("html").animate({ scrollTop: 0 });
-                });
-
-                window.addEventListener("scroll", function () {
-                    if (window.pageYOffset > 100) {
-                        document
-                            .querySelector(".back-to-top")
-                            .classList.add("active");
-                    } else {
-                        document
-                            .querySelector(".back-to-top")
-                            .classList.remove("active");
-                    }
-                });
-
-                $(".menu-icon").click(function () {
-                    $(".mobile-menu").addClass("active");
-                });
-
-                $(".menu-icon-close").click(function () {
-                    $(".mobile-menu").removeClass("active");
-                });
-            });
-        </script>
+        <script src="./js/index.js"></script>
     </body>
 </html>
